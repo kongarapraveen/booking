@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Ticket Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Tickets</h1>
+        
+        <div class="event-details">
+            <h2>Select Event</h2>
+            <select id="event" required>
+                <option value="concert" data-price="50">Concert - $50</option>
+                <option value="movie" data-price="15">Movie - $15</option>
+                <option value="play" data-price="25">Play - $25</option>
+            </select>
+            
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" required>
+        </div>
+
+        <div class="seat-selection">
+            <h2>Select Your Seats</h2>
+            <div class="seats-container" id="seatsContainer"></div>
+        </div>
+
+        <div class="booking-summary">
+            <h2>Booking Summary</h2>
+            <p>Total Tickets: <span id="totalTickets">0</span></p>
+            <p>Total Price: $<span id="totalPrice">0</span></p>
+        </div>
+
+        <button id="bookButton" disabled>Book Tickets</button>
+
+        <div id="confirmation" class="hidden">
+            <h2>Booking Confirmation</h2>
+            <p id="confirmationText"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
